@@ -1147,6 +1147,21 @@ namespace CardSystemMng.Common.Helper
             }
         }
         /// <summary>
+        /// object强制转化为DateTime类型(吃掉异常)
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        /// <summary>
+        public static DateTime ObjToDate(this object thisValue)
+        {
+            DateTime reval = DateTime.MinValue;
+            if (thisValue != null && thisValue != DBNull.Value && DateTime.TryParse(thisValue.ToString(), out reval))
+            {
+                reval = Convert.ToDateTime(thisValue);
+            }
+            return reval;
+        }
+        /// <summary>
         /// 时间截转换为标准时间
         /// </summary>
         /// <param name="timeStamp"></param>

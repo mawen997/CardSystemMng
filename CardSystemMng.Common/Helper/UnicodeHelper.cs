@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CardSystemMng.Common.Helper
 {
@@ -34,15 +35,6 @@ namespace CardSystemMng.Common.Helper
 
             return new Regex(@"\\u([0-9A-F]{4})", RegexOptions.IgnoreCase | RegexOptions.Compiled).Replace(
                  unicode, x => string.Empty + Convert.ToChar(Convert.ToUInt16(x.Result("$1"), 16)));
-
-            //string resultStr = "";
-            //string[] strList = unicode.Split('u');
-            //for (int i = 1; i < strList.Length; i++)
-            //{
-            //    resultStr += (char)int.Parse(strList[i], System.Globalization.NumberStyles.HexNumber);
-            //}
-            //return resultStr;
         }
     }
-}
 }
