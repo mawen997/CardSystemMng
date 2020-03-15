@@ -25,6 +25,7 @@ namespace CardSystemMng.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMiniProfiler();
             services.AddControllers();
         }
 
@@ -41,7 +42,7 @@ namespace CardSystemMng.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseMiniProfiler();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

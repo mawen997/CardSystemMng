@@ -1127,6 +1127,45 @@ namespace CardSystemMng.Common.Helper
             }
         }
         /// <summary>
+        /// object转化为Bool类型
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static bool ObjAlToBool(this object obj)
+        {
+            bool flag;
+            if (obj == null)
+            {
+                return false;
+            }
+            if (obj.Equals(DBNull.Value))
+            {
+                return false;
+            }
+
+            if (obj.ToString().ToLower().Trim() == "true")
+            {
+                return true;
+            }
+            if (obj.ToString().ToLower().Trim() == "false")
+            {
+                return false;
+            }
+
+            if (obj.ObjToInt() >= 1)
+            {
+                return true;
+            }
+            if (obj.ObjToInt() <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
         /// object强制转化为DateTime类型(吃掉异常)
         /// </summary>
         /// <param name="obj"></param>
