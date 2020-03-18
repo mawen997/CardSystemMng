@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Profiling.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace CardSystemMng.Api.Extensions
             services.AddMiniProfiler(options =>
             {
                 options.RouteBasePath = "/profiler";
-                //(options.Storage as MemoryCacheStorage).CacheDuration = TimeSpan.FromMinutes(10);
+                // (options.Storage as MemoryCacheStorage).CacheDuration = TimeSpan.FromMinutes(10);
                 options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.Left;
                 options.PopupShowTimeWithChildren = true;
 

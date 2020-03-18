@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\CardSystemMng.Api\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CardSystemMng.IRepository\CardSystemMng.IRepository.csproj" />
+    <ProjectReference Include="..\CardSystemMng.IServices\CardSystemMng.IServices.csproj" />
+    <ProjectReference Include="..\CardSystemMng.Model\CardSystemMng.Model.csproj" />
+  </ItemGroup>
 
 </Project>

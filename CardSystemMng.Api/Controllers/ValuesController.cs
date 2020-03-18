@@ -6,13 +6,16 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using StackExchange.Profiling;
 
 namespace CardSystemMng.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Values")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
+       
+       
         public string GetTokel()
         {
             var cl = new Claim[] {
@@ -22,6 +25,13 @@ namespace CardSystemMng.Api.Controllers
 
 
             return "";
+        }
+        [HttpGet("Gettestdata/")]
+       // [Route("data/Values/Gettestdata")]
+        public IActionResult Gettestdata()
+        {
+            MiniProfiler.Current.CustomTiming("测试"+DateTime.Now,"sdfsdfsdfsdf");
+            return Content("8555454");
         }
     }
 }

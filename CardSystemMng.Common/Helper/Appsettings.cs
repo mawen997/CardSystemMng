@@ -48,6 +48,6 @@ namespace CardSystemMng.Common.Helper
             catch (Exception) { }
 
             return "";
-        }
+       }
     }
 }
