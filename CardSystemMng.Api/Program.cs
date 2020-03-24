@@ -78,7 +78,7 @@ namespace CardSystemMng.Api
                     serverOptions.AllowSynchronousIO = true;//∆Ù”√Õ¨≤Ω IO
                 })
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:8081")
+                .UseUrls("http://localhost:8082")
                 .ConfigureLogging((hostingContext, builder) =>
                 {
                     builder.ClearProviders();

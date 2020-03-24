@@ -40,7 +40,7 @@ namespace CardSystemMng.Api.Extensions
                         Version = version,
                         Title = $"{ApiName} 接口文档——Netcore 3.1",
                         Description = $"{ApiName} HTTP API " + version,
-                        Contact = new OpenApiContact { Name = ApiName, Email = "Blog.Core@xxx.com", Url = new Uri("https://www.jianshu.com/u/94102b59cc2a") },
+                        Contact = new OpenApiContact { Name = ApiName, Email = "CardSystemMng@xxx.com", Url = new Uri("https://www.jianshu.com/u/94102b59cc2a") },
                         License = new OpenApiLicense { Name = ApiName + " 官方文档", Url = new Uri("http://apk.neters.club/.doc/") }
                     });
                     c.OrderActionsBy(o => o.RelativePath);
@@ -50,15 +50,15 @@ namespace CardSystemMng.Api.Extensions
                 try
                 {
                     //就是这里
-                    var xmlPath = Path.Combine(basePath, "Blog.Core.xml");//这个就是刚刚配置的xml文件名
+                    var xmlPath = Path.Combine(basePath, "CardSystemMng.Api.xml");//这个就是刚刚配置的xml文件名
                     c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
 
-                    var xmlModelPath = Path.Combine(basePath, "Blog.Core.Model.xml");//这个就是Model层的xml文件名
+                    var xmlModelPath = Path.Combine(basePath, "CardSystemMng.Model.xml");//这个就是Model层的xml文件名
                     c.IncludeXmlComments(xmlModelPath);
                 }
                 catch (Exception ex)
                 {
-                    log.Error("Blog.Core.xml和Blog.Core.Model.xml 丢失，请检查并拷贝。\n" + ex.Message);
+                    log.Error("CardSystemMng.xml和CardSystemMng.Model.xml 丢失，请检查并拷贝。\n" + ex.Message);
                 }
 
                 // 开启加权小锁

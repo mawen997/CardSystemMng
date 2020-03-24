@@ -530,7 +530,7 @@
     "TopicId": 12,
     "tdLogo": "\/images\\0117185602WeChat Screenshot_20190117185535.jpg",
     "tdName": "所有 Github 在线地址",
-    "tdContent": "Nuxt.tBug（nuxt+.netcore项目） ：\n\n[https:\/\/github.com\/anjoy8\/Nuxt.tBug](https:\/\/github.com\/anjoy8\/Nuxt.tBug)\n\n[http:\/\/123.206.33.109:7090](http:\/\/123.206.33.109:7090)\n***\n\n\nBlog.Core（.net core项目）:\n\n[https:\/\/github.com\/anjoy8\/Blog.Core](https:\/\/github.com\/anjoy8\/Blog.Core)\n\n[http:\/\/123.206.33.109:8081\/](http:\/\/123.206.33.109:8081\/)\n\n***\n\n\nBlog.Vue（vue+.netcore项目）:\n\n[https:\/\/github.com\/anjoy8\/Blog.Vue](https:\/\/github.com\/anjoy8\/Blog.Vue)\n\n[http:\/\/123.206.33.109:8077\/](http:\/\/123.206.33.109:8077\/)\n",
+    "tdContent": "Nuxt.tBug（nuxt+.netcore项目） ：\n\n[https:\/\/github.com\/anjoy8\/Nuxt.tBug](https:\/\/github.com\/anjoy8\/Nuxt.tBug)\n\n[http:\/\/123.206.33.109:7090](http:\/\/123.206.33.109:7090)\n***\n\n\nCardSystemMng（.net core项目）:\n\n[https:\/\/github.com\/anjoy8\/CardSystemMng](https:\/\/github.com\/anjoy8\/CardSystemMng)\n\n[http:\/\/123.206.33.109:8081\/](http:\/\/123.206.33.109:8081\/)\n\n***\n\n\nBlog.Vue（vue+.netcore项目）:\n\n[https:\/\/github.com\/anjoy8\/Blog.Vue](https:\/\/github.com\/anjoy8\/Blog.Vue)\n\n[http:\/\/123.206.33.109:8077\/](http:\/\/123.206.33.109:8077\/)\n",
     "tdDetail": "本项目中出现的bug的源代码，包含了NetCore、Vue、DDD等",
     "tdSectendDetail": "tbug",
     "tdIsDelete": "0",
@@ -897,7 +897,7 @@
     "tdCreatetime": "\/Date(1546272000000+0800)\/",
     "tdUpdatetime": "\/Date(1546272000000+0800)\/",
     "tdTop": 0,
-    "tdAuthor": "Blog.Core",
+    "tdAuthor": "CardSystemMng",
     "Id": 53
   },
   {

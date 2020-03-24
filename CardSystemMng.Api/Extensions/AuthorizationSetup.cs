@@ -164,7 +164,7 @@ namespace CardSystemMng.Api.Extensions
             //  {
             //      options.Authority = "http://localhost:5002";
             //      options.RequireHttpsMetadata = false;
-            //      options.ApiName = "blog.core.api";
+            //      options.ApiName = "CardSystemMng.api";
             //  });
 
 

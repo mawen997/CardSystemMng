@@ -219,6 +219,11 @@
             <param name="signingCredentials">签名验证实体</param>
             <param name="expiration">过期时间</param>
         </member>
+        <member name="T:CardSystemMng.Api.Controllers.ValuesController">
+            <summary>
+            啊手动阀手动阀
+            </summary>
+        </member>
         <member name="T:CardSystemMng.Api.Extensions.AuthorizationSetup">
             <summary>
             Db 启动服务

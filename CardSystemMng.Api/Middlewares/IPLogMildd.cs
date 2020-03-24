@@ -54,7 +54,7 @@ namespace CardSystemMng.Api.Middlewares
                         {
                             Parallel.For(0, 1, e =>
                             {
-                                LogLock.OutSql2Log("RequestIpInfoLog", new string[] { requestInfo + "," }, false);
+                                LogLock.OutSql2Log("RequestIpInfoLog"+DateTime.Now.ToString("yyyy-MM-dd"), new string[] { requestInfo + "," }, false);
                             });
 
                             request.Body.Position = 0;
