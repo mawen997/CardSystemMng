@@ -40,8 +40,8 @@ namespace CardSystemMng.Api.Extensions
                         Version = version,
                         Title = $"{ApiName} 接口文档——Netcore 3.1",
                         Description = $"{ApiName} HTTP API " + version,
-                        Contact = new OpenApiContact { Name = ApiName, Email = "CardSystemMng@xxx.com", Url = new Uri("https://www.jianshu.com/u/94102b59cc2a") },
-                        License = new OpenApiLicense { Name = ApiName + " 官方文档", Url = new Uri("http://apk.neters.club/.doc/") }
+                      //  Contact = new OpenApiContact { Name = ApiName, Email = "CardSystemMng@xxx.com", Url = new Uri("") },
+                      // License = new OpenApiLicense { Name = ApiName + " 官方文档", Url = new Uri("") }
                     });
                     c.OrderActionsBy(o => o.RelativePath);
                 });

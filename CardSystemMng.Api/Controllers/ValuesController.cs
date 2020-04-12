@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Profiling;
 using CardSystemMng.Common.Helper;
+using CardSystemMng.IServices;
+
 namespace CardSystemMng.Api.Controllers
 {
     /// <summary>
@@ -19,6 +21,11 @@ namespace CardSystemMng.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public IServices.IModuleServices _Modul;
+        public ValuesController(IModuleServices mud)
+        {
+            _Modul = mud;
+        }
         //[NonAction]
         ///// <summary>
         ///// 色弱发无色的发射点
@@ -69,9 +76,10 @@ namespace CardSystemMng.Api.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Model.Models.Module Getdata(string id)
+        public List<Model.Models.Module> Getdata(string id)
         {
-            return new Model.Models.Module();
+            var data = _Modul.Query().Result;
+            return data;
         }
     }
 }
