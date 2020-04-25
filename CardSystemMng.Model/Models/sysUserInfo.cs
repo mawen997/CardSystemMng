@@ -1,7 +1,9 @@
 ﻿using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CardSystemMng.Model.Models
 {
@@ -33,17 +35,17 @@ namespace CardSystemMng.Model.Models
         /// <summary>
         /// 登录账号
         /// </summary>
-        [SugarColumn(ColumnDataType = "nvarchar", Length = 200, IsNullable = true)]
+        [SugarColumn(ColumnDataType ="nvarchar",Length = 200, IsNullable = true)]
         public string uLoginName { get; set; }
         /// <summary>
         /// 登录密码
         /// </summary>
-        [SugarColumn(ColumnDataType = "nvarchar", Length = 200, IsNullable = true)]
+        [SugarColumn(ColumnDataType ="nvarchar",Length = 200, IsNullable = true)]
         public string uLoginPWD { get; set; }
         /// <summary>
         /// 真实姓名
         /// </summary>
-        [SugarColumn(ColumnDataType = "nvarchar", Length = 200, IsNullable = true)]
+        [SugarColumn(ColumnDataType ="nvarchar",Length = 200, IsNullable = true)]
         public string uRealName { get; set; }
         /// <summary>
         /// 状态
@@ -52,7 +54,7 @@ namespace CardSystemMng.Model.Models
         /// <summary>
         /// 备注
         /// </summary>
-        [SugarColumn(ColumnDataType = "nvarchar", Length = int.MaxValue, IsNullable = true)]
+        [SugarColumn(ColumnDataType ="nvarchar",Length = int.MaxValue, IsNullable = true)]
         public string uRemark { get; set; }
         /// <summary>
         /// 创建时间
@@ -66,7 +68,7 @@ namespace CardSystemMng.Model.Models
         /// <summary>
         ///最后登录时间 
         /// </summary>
-        public DateTime uLastErrTime { get; set; } = DateTime.Now;
+        public DateTime uLastErrTime { get; set; }= DateTime.Now;
 
         /// <summary>
         ///错误次数 
@@ -78,7 +80,7 @@ namespace CardSystemMng.Model.Models
         /// <summary>
         /// 登录账号
         /// </summary>
-        [SugarColumn(ColumnDataType = "nvarchar", Length = 200, IsNullable = true)]
+        [SugarColumn(ColumnDataType ="nvarchar",Length = 200, IsNullable = true)]
         public string name { get; set; }
 
         // 性别
@@ -91,7 +93,7 @@ namespace CardSystemMng.Model.Models
         [SugarColumn(IsNullable = true)]
         public DateTime birth { get; set; } = DateTime.Now;
         // 地址
-        [SugarColumn(ColumnDataType = "nvarchar", Length = 200, IsNullable = true)]
+        [SugarColumn(ColumnDataType ="nvarchar",Length = 200, IsNullable = true)]
         public string addr { get; set; }
 
         [SugarColumn(IsNullable = true)]

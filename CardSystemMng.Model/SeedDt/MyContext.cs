@@ -2,6 +2,7 @@
 using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace CardSystemMng.Model.SeedDt
@@ -16,7 +17,7 @@ namespace CardSystemMng.Model.SeedDt
 
         /// <summary>
         /// 连接字符串 
-        /// Blog.Core
+        /// CardSystemMng
         /// </summary>
         public static MutiDBOperate GetMainConnectionDb()
         {
@@ -37,7 +38,7 @@ namespace CardSystemMng.Model.SeedDt
         }
         /// <summary>
         /// 连接字符串 
-        /// Blog.Core
+        /// CardSystemMng
         /// </summary>
         public static string ConnectionString
         {
@@ -46,7 +47,7 @@ namespace CardSystemMng.Model.SeedDt
         }
         /// <summary>
         /// 数据库类型 
-        /// Blog.Core 
+        /// CardSystemMng 
         /// </summary>
         public static DbType DbType
         {
@@ -55,7 +56,7 @@ namespace CardSystemMng.Model.SeedDt
         }
         /// <summary>
         /// 数据连接对象 
-        /// Blog.Core 
+        /// CardSystemMng 
         /// </summary>
         public SqlSugarClient Db
         {
@@ -65,7 +66,7 @@ namespace CardSystemMng.Model.SeedDt
 
         /// <summary>
         /// 数据库上下文实例（自动关闭连接）
-        /// Blog.Core 
+        /// CardSystemMng 
         /// </summary>
         public static MyContext Context
         {
@@ -122,11 +123,21 @@ namespace CardSystemMng.Model.SeedDt
           string strInterface,
           bool blnSerializable = false)
         {
+            var fl = @"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.Model\Models";
+            var files = Directory.GetFiles(fl);
+            var nms = new List<string>();
+            foreach (var m in files)
+            {
+                var f = Path.GetFileName(m).Replace(".cs","");
+                nms.Add(f);
+            }
+           
             var IDbFirst = _db.DbFirst;
             if (lstTableNames != null && lstTableNames.Length > 0)
             {
                 IDbFirst = IDbFirst.Where(lstTableNames);
             }
+            
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
@@ -184,8 +195,8 @@ namespace " + strNameSpace + @"
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
-using Blog.Core.IRepository.Base;
-using Blog.Core.Model.Models;
+using CardSystemMng.IRepository.BASE;
+using CardSystemMng.Model.Models;
 
 namespace " + strNameSpace + @"
 {
@@ -228,8 +239,8 @@ namespace " + strNameSpace + @"
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
-using Blog.Core.IServices.BASE;
-using Blog.Core.Model.Models;
+using CardSystemMng.IServices.BASE;
+using CardSystemMng.Model.Models;
 
 namespace " + strNameSpace + @"
 {	
@@ -275,10 +286,10 @@ namespace " + strNameSpace + @"
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
-using Blog.Core.IRepository;
-using Blog.Core.IRepository.UnitOfWork;
-using Blog.Core.Model.Models;
-using Blog.Core.Repository.Base;
+using CardSystemMng.IRepository;
+using CardSystemMng.IRepository.BASE;
+using CardSystemMng.Model.Models;
+using CardSystemMng.Repository.BASE;
 
 namespace " + strNameSpace + @"
 {
@@ -324,10 +335,10 @@ namespace " + strNameSpace + @"
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
-using Blog.Core.IRepository;
-using Blog.Core.IServices;
-using Blog.Core.Model.Models;
-using Blog.Core.Services.BASE;
+using CardSystemMng.IRepository;
+using CardSystemMng.IServices;
+using CardSystemMng.Model.Models;
+using CardSystemMng.Services.BASE;
 
 namespace " + strNameSpace + @"
 {
@@ -409,13 +420,21 @@ namespace " + strNameSpace + @"
         /// <param name="lstEntitys">指定的实体</param>
         public void CreateTableByEntity(bool blnBackupTable, params Type[] lstEntitys)
         {
-            if (blnBackupTable)
+            try
             {
-                _db.CodeFirst.BackupTable().InitTables(lstEntitys); //change entity backupTable            
+                if (blnBackupTable)
+                {
+                    _db.CodeFirst.BackupTable().InitTables(lstEntitys); //change entity backupTable            
+                }
+                else
+                {
+                    _db.CodeFirst.InitTables(lstEntitys);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                _db.CodeFirst.InitTables(lstEntitys);
+
+               // throw;
             }
         }
         #endregion

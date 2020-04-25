@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace CardSystemMng.Model.SeedDt
@@ -15,6 +16,7 @@ namespace CardSystemMng.Model.SeedDt
 
             try
             {
+                
                 myContext.Create_Model_ClassFileByDBTalbe($@"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.Model\Models", "CardSystemMng.Model.Models", new string[] { }, "");
                 return true;
             }

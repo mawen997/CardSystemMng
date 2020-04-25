@@ -219,6 +219,48 @@
             <param name="signingCredentials">签名验证实体</param>
             <param name="expiration">过期时间</param>
         </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.#ctor(CardSystemMng.Model.SeedDt.MyContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="myContext"></param>
+        </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.GetFrameFiles">
+            <summary>
+            生成整体框架
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.GetModelFiles">
+            <summary>
+            生成 Model 层文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.GetIRepositoryFiles">
+            <summary>
+            生成 IRepository 层文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.GetIServiceFiles">
+            <summary>
+            生成 IService 层文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.GetRepositoryFiles">
+            <summary>
+            生成 Repository 层文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CardSystemMng.Api.Controllers.DbFirstController.GetServicesFiles">
+            <summary>
+            生成 Services 层文件
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:CardSystemMng.Api.Controllers.ValuesController">
             <summary>
             啊手动阀手动阀

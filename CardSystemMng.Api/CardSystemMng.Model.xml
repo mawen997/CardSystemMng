@@ -4,6 +4,132 @@
         <name>CardSystemMng.Model</name>
     </assembly>
     <members>
+        <member name="P:CardSystemMng.Model.Models.Advertisement.ImgUrl">
+            <summary>
+            广告图片
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Advertisement.Title">
+            <summary>
+            广告标题
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Advertisement.Url">
+            <summary>
+            广告链接
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Advertisement.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Advertisement.Createdate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:CardSystemMng.Model.Models.BlogArticle">
+            <summary>
+            博客文章
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bID">
+            <summary>
+            主键
+            </summary>
+            这里之所以没用RootEntity，是想保持和之前的数据库一致，主键是bID，不是Id
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bsubmitter">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.btitle">
+            <summary>
+            标题blog
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bcategory">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bcontent">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.btraffic">
+            <summary>
+            访问量
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bcommentNum">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bUpdateTime">
+            <summary> 
+            修改时间
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.bRemark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.BlogArticle.IsDeleted">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.id">
+            <summary>
+            留言表
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.blogId">
+            <summary>博客ID
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.createdate">
+            <summary>创建时间
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.phone">
+            <summary>手机
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.QQ">
+            <summary>qq
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.body">
+            <summary>留言内容
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.ip">
+            <summary>ip地址
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.Guestbook.isshow">
+            <summary>是否显示在前台,0否1是
+            
+            </summary>
+        </member>
         <member name="T:CardSystemMng.Model.Models.Module">
             <summary>
             接口API地址信息表
@@ -489,6 +615,81 @@
             登录账号
             </summary>
         </member>
+        <member name="T:CardSystemMng.Model.Models.TasksQz">
+            <summary>
+            任务计划表
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.Name">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.JobGroup">
+            <summary>
+            任务分组
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.Cron">
+            <summary>
+            任务运行时间表达式
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.AssemblyName">
+            <summary>
+            任务所在DLL对应的程序集名称
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.ClassName">
+            <summary>
+            任务所在类
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.Remark">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.RunTimes">
+            <summary>
+            执行次数
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.BeginTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.TriggerType">
+            <summary>
+            触发器类型（0、simple 1、cron）
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.IntervalSecond">
+            <summary>
+            执行间隔时间, 秒为单位
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.IsStart">
+            <summary>
+            是否启动
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.JobParams">
+            <summary>
+            执行传参
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.TasksQz.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
         <member name="T:CardSystemMng.Model.Models.Topic">
             <summary>
             Tibug 类别
@@ -547,6 +748,67 @@
         <member name="P:CardSystemMng.Model.Models.UserRole.ModifyTime">
             <summary>
             修改时间
+            </summary>
+        </member>
+        <member name="T:CardSystemMng.Model.Models.web_logmng">
+            <summary>
+            网站日志管理
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.WwebLogID">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.requestUrl">
+            <summary>
+            Desc:请求的页面地址
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.requestName">
+            <summary>
+            Desc:请求的页面名称
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.webtype">
+            <summary>
+            Desc:1是新制卡，2是补卡，3是邮寄提交和支付，4是注册和身份认证
+            Default:0
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.FormIP">
+            <summary>
+            Desc:来源IP
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.CreateTime">
+            <summary>
+            Desc:请求时间
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.requestData">
+            <summary>
+            Desc:请求的内容
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.web_logmng.responseData">
+            <summary>
+            Desc:返回的内容
+            Default:
+            Nullable:True
             </summary>
         </member>
         <member name="T:CardSystemMng.Model.PageModel`1">
@@ -625,31 +887,31 @@
         <member name="M:CardSystemMng.Model.SeedDt.MyContext.GetMainConnectionDb">
             <summary>
             连接字符串 
-            Blog.Core
+            CardSystemMng
             </summary>
         </member>
         <member name="P:CardSystemMng.Model.SeedDt.MyContext.ConnectionString">
             <summary>
             连接字符串 
-            Blog.Core
+            CardSystemMng
             </summary>
         </member>
         <member name="P:CardSystemMng.Model.SeedDt.MyContext.DbType">
             <summary>
             数据库类型 
-            Blog.Core 
+            CardSystemMng 
             </summary>
         </member>
         <member name="P:CardSystemMng.Model.SeedDt.MyContext.Db">
             <summary>
             数据连接对象 
-            Blog.Core 
+            CardSystemMng 
             </summary>
         </member>
         <member name="P:CardSystemMng.Model.SeedDt.MyContext.Context">
             <summary>
             数据库上下文实例（自动关闭连接）
-            Blog.Core 
+            CardSystemMng 
             </summary>
         </member>
         <member name="M:CardSystemMng.Model.SeedDt.MyContext.#ctor">

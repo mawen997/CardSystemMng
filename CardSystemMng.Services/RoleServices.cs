@@ -30,16 +30,16 @@ namespace CardSystemMng.Services
         /// <returns></returns>
         public async Task<Role> SaveRole(string roleName)
         {
-            Role role = new Role(roleName);
+            Role Role = new Role(roleName);
             Role model = new Role();
-            var userList = await base.Query(a => a.Name == role.Name && a.Enabled);
+            var userList = await base.Query(a => a.Name == Role.Name && a.Enabled);
             if (userList.Count > 0)
             {
                 model = userList.FirstOrDefault();
             }
             else
             {
-                var id = await base.Add(role);
+                var id = await base.Add(Role);
                 model = await base.QueryById(id);
             }
 

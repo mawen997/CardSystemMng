@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+//using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -73,17 +74,19 @@ namespace CardSystemMng.Model.SeedDt
                 Console.WriteLine("Create Tables...");
                 // 创建表
                 myContext.CreateTableByEntity(false,
-                    typeof(Module),
+                    typeof(Models.Module),
                     typeof(ModulePermission),
                     typeof(OperateLog),
                     typeof(PasswordLib),
-                    typeof(Permission),
-                    typeof(Role),
-                    typeof(RoleModulePermission),
-                    typeof(sysUserInfo),
-                    typeof(Topic),
-                    typeof(TopicDetail),
-                    typeof(UserRole));
+                    typeof(Permission));
+
+                myContext.CreateTableByEntity(false,
+                   typeof(Role),
+                   typeof(RoleModulePermission),
+                   typeof(sysUserInfo),
+                   typeof(Topic),
+                   typeof(TopicDetail),
+                   typeof(UserRole));
 
                 // 后期单独处理某些表
                 // myContext.Db.CodeFirst.InitTables(typeof(sysUserInfo));
@@ -96,9 +99,9 @@ namespace CardSystemMng.Model.SeedDt
                     Console.WriteLine("Seeding database...");
 
                     #region Module
-                    if (!await myContext.Db.Queryable<Module>().AnyAsync()&File.Exists(string.Format(SeedDataFolder, "Module")))
+                    if (!await myContext.Db.Queryable<Module>().AnyAsync()&File.Exists(string.Format(SeedDataFolder, "module")))
                     {
-                        myContext.GetEntityDB<Module>().InsertRange(JsonHelper.ParseFormByJson<List<Module>>(FileHelper.ReadFile(string.Format(SeedDataFolder, "Module"), Encoding.UTF8)));
+                        myContext.GetEntityDB<Module>().InsertRange(JsonHelper.ParseFormByJson<List<Module>>(FileHelper.ReadFile(string.Format(SeedDataFolder, "module"), Encoding.UTF8)));
                         Console.WriteLine("Table:Module created success!");
                     }
                     else

@@ -1,7 +1,6 @@
-﻿using SqlSugar;
+﻿using CardSystemMng.Model.Models;
+using SqlSugar;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CardSystemMng.Model.Models
 {
