@@ -435,6 +435,102 @@
             获取或设置是否禁用，逻辑上的删除，非物理删除
              </summary>
         </member>
+        <member name="T:CardSystemMng.Model.Models.p_in_menu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.In_MenuID">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:False
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.MenName">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.MenuLevel">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.MenAction">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.MenController">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.TLmenuID">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.MenIco">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.IsDelete">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.Sort">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.IsDisplay">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.Description">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.LinkUrl">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.p_in_menu.MenuTypeNameID">
+            <summary>
+            注释1:
+            默认值:0
+            值是否可以为空:False
+            </summary>           
+        </member>
         <member name="T:CardSystemMng.Model.Models.Role">
             <summary>
             角色表
@@ -495,60 +591,127 @@
             修改时间
             </summary>
         </member>
-        <member name="T:CardSystemMng.Model.Models.RoleModulePermission">
+        <member name="T:CardSystemMng.Model.Models.roleinfo">
             <summary>
-            按钮跟权限关联表
+            
             </summary>
         </member>
+        <member name="P:CardSystemMng.Model.Models.roleinfo.RoleInfoID">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:False
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.roleinfo.RoleMngID">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.roleinfo.UserInfoID">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.roleinfo.RoleName">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.roleinfo.RoleIcon">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="T:CardSystemMng.Model.Models.RoleModulePermission">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.RoleModulePermission.Id">
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:False
+            </summary>           
+        </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.IsDeleted">
-             <summary>
-            获取或设置是否禁用，逻辑上的删除，非物理删除
-             </summary>
+            <summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.RoleId">
             <summary>
-            角色ID
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:False
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.ModuleId">
             <summary>
-            菜单ID
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:False
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.PermissionId">
             <summary>
-            按钮ID
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.CreateId">
             <summary>
-            创建ID
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.CreateBy">
             <summary>
-            创建者
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.CreateTime">
             <summary>
-            创建时间
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.ModifyId">
             <summary>
-            修改ID
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.ModifyBy">
             <summary>
-            修改者
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RoleModulePermission.ModifyTime">
             <summary>
-            修改时间
-            </summary>
+            注释1:
+            默认值:
+            值是否可以为空:True
+            </summary>           
         </member>
         <member name="P:CardSystemMng.Model.Models.RootEntity.Id">
             <summary>
@@ -699,6 +862,88 @@
             <summary>
             Tibug 博文
             </summary>
+        </member>
+        <member name="T:CardSystemMng.Model.Models.userinfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.UserInfoID">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:False
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.LogUserName">
+            <summary>
+            注释:登录的用户名
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.LogUserPassWord">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.UserName">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.Sex">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.CardID">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.Birthday">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.QQ">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.mail">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.RoleInfoID">
+            <summary>
+            注释:
+            默认值:
+            值是否可以为空:True
+            </summary>           
+        </member>
+        <member name="P:CardSystemMng.Model.Models.userinfo.IsEnable">
+            <summary>
+            注释:
+            默认值:b'0'
+            值是否可以为空:False
+            </summary>           
         </member>
         <member name="T:CardSystemMng.Model.Models.UserRole">
             <summary>
@@ -950,6 +1195,15 @@
              <param name="strNameSpace">命名空间</param>
              <param name="lstTableNames">生产指定的表</param>
              <param name="strInterface">实现接口</param>
+        </member>
+        <member name="M:CardSystemMng.Model.SeedDt.MyContext.GetDbFirst(SqlSugar.IDbFirst,System.String,System.String[])">
+            <summary>
+            公告方法：筛选需要创建的实体类
+            </summary>
+            <param name="IDbFirst"></param>
+            <param name="path"></param>
+            <param name="lstTableNames"></param>
+            <returns></returns>
         </member>
         <member name="M:CardSystemMng.Model.SeedDt.MyContext.Create_Repository_ClassFileByDBTalbe(System.String,System.String,System.String[],System.String)">
              <summary>

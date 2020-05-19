@@ -1,8 +1,10 @@
 ﻿using CardSystemMng.Common.DB;
+using CardSystemMng.Common.Helper;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace CardSystemMng.Model.SeedDt
@@ -123,28 +125,15 @@ namespace CardSystemMng.Model.SeedDt
           string strInterface,
           bool blnSerializable = false)
         {
-            var fl = @"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.Model\Models";
-            var files = Directory.GetFiles(fl);
-            var nms = new List<string>();
-            foreach (var m in files)
-            {
-                var f = Path.GetFileName(m).Replace(".cs","");
-                nms.Add(f);
-            }
-           
-            var IDbFirst = _db.DbFirst;
-            if (lstTableNames != null && lstTableNames.Length > 0)
-            {
-                IDbFirst = IDbFirst.Where(lstTableNames);
-            }
-            
-            IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
-
-                .SettingClassTemplate(p => p = @"
+            var IDbFirst = GetDbFirst(_db.DbFirst, strPath, lstTableNames);
+            IDbFirst.SettingClassTemplate(p => p =
+                
+                @"
 {using}
 
 namespace " + strNameSpace + @"
 {
+    
     {ClassDescription}{SugarTable}" + (blnSerializable ? "[Serializable]" : "") + @"
     public class {ClassName}" + (string.IsNullOrEmpty(strInterface) ? "" : (" : " + strInterface)) + @"
     {
@@ -154,18 +143,19 @@ namespace " + strNameSpace + @"
         {PropertyName}
     }
 }
-                    ")
+                    ").SettingPropertyDescriptionTemplate(old =>
+                
+                    old= @"
+		   /// <summary>
+           /// 注释:{PropertyDescription}
+           /// 默认值:{DefaultValue}
+           /// 值是否可以为空:{IsNullable}
+           /// </summary>"
+                )
 
-                .SettingPropertyTemplate(p => p = @"
-        {SugarColumn}
-        public {PropertyType} {PropertyName} { get; set; }
-
-            ")
-
-                 //.SettingPropertyDescriptionTemplate(p => p = "          private {PropertyType} _{PropertyName};\r\n" + p)
-                 //.SettingConstructorTemplate(p => p = "              this._{PropertyName} ={DefaultValue};")
-
-                 .CreateClassFile(strPath, strNameSpace);
+                .SettingPropertyTemplate(p =>
+               { return p; })
+                 .IsCreateAttribute().IsCreateDefaultValue().CreateClassFile(strPath, strNameSpace);
 
         }
         #endregion
@@ -187,11 +177,7 @@ namespace " + strNameSpace + @"
           string[] lstTableNames,
           string strInterface)
         {
-            var IDbFirst = _db.DbFirst;
-            if (lstTableNames != null && lstTableNames.Length > 0)
-            {
-                IDbFirst = IDbFirst.Where(lstTableNames);
-            }
+            var IDbFirst = GetDbFirst(_db.DbFirst, strPath, lstTableNames);
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
@@ -231,13 +217,9 @@ namespace " + strNameSpace + @"
           string[] lstTableNames,
           string strInterface)
         {
-            var IDbFirst = _db.DbFirst;
-            if (lstTableNames != null && lstTableNames.Length > 0)
-            {
-                IDbFirst = IDbFirst.Where(lstTableNames);
-            }
+            
+            var IDbFirst = GetDbFirst(_db.DbFirst,strPath, lstTableNames);            
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
-
                 .SettingClassTemplate(p => p = @"
 using CardSystemMng.IServices.BASE;
 using CardSystemMng.Model.Models;
@@ -259,8 +241,34 @@ namespace " + strNameSpace + @"
 
         }
         #endregion
-
-
+        #region 公告方法：筛选需要创建的实体类
+        /// <summary>
+        /// 公告方法：筛选需要创建的实体类
+        /// </summary>
+        /// <param name="IDbFirst"></param>
+        /// <param name="path"></param>
+        /// <param name="lstTableNames"></param>
+        /// <returns></returns>
+        public IDbFirst GetDbFirst(IDbFirst IDbFirst, string path, string[] lstTableNames)
+        {
+            var files = Directory.GetFiles(path);
+            var nms = new List<string>();
+            foreach (var m in files)
+            {
+                var f = Path.GetFileName(m).Replace(".cs", "");
+                nms.Add(f);
+            }
+            if (lstTableNames != null && lstTableNames.Length > 0)
+            {
+                IDbFirst = IDbFirst.Where(lstTableNames);
+            }
+            else if (nms.Count > 0)
+            {
+                IDbFirst = IDbFirst.Where(p => !nms.Any(l => l.ToLower().StartsWith(p.ToLower())));
+            }
+            return IDbFirst;
+        } 
+        #endregion
 
         #region 根据数据库表生产 Repository 层
 
@@ -278,11 +286,7 @@ namespace " + strNameSpace + @"
           string[] lstTableNames,
           string strInterface)
         {
-            var IDbFirst = _db.DbFirst;
-            if (lstTableNames != null && lstTableNames.Length > 0)
-            {
-                IDbFirst = IDbFirst.Where(lstTableNames);
-            }
+            var IDbFirst = GetDbFirst(_db.DbFirst, strPath, lstTableNames);
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"
@@ -327,11 +331,7 @@ namespace " + strNameSpace + @"
           string[] lstTableNames,
           string strInterface)
         {
-            var IDbFirst = _db.DbFirst;
-            if (lstTableNames != null && lstTableNames.Length > 0)
-            {
-                IDbFirst = IDbFirst.Where(lstTableNames);
-            }
+            var IDbFirst = GetDbFirst(_db.DbFirst, strPath, lstTableNames);
             IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
 
                 .SettingClassTemplate(p => p = @"

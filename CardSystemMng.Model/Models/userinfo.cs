@@ -11,96 +11,90 @@ namespace CardSystemMng.Model.Models
         ///<summary>
     ///
     ///</summary>
-    [SugarTable("rolemodulepermission")]
-    public class RoleModulePermission
+    [SugarTable("userinfo")]
+    public class userinfo
     {
-        public RoleModulePermission()
+        public userinfo()
         {
         }
                    /// <summary>
-           /// 注释1:
+           /// 注释:
            /// 默认值:
            /// 值是否可以为空:False
            /// </summary>           
            [SugarColumn(IsPrimaryKey=true,IsIdentity=true)]
-           public int Id {get;set;}
+           public long UserInfoID {get;set;}
 
            /// <summary>
-           /// 注释1:
+           /// 注释:登录的用户名
            /// 默认值:
            /// 值是否可以为空:True
            /// </summary>           
-           public bool? IsDeleted {get;set;}
+           public string LogUserName {get;set;}
 
            /// <summary>
-           /// 注释1:
+           /// 注释:
            /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public string LogUserPassWord {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public string UserName {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public int? Sex {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public string CardID {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public string Birthday {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public string QQ {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public string mail {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:
+           /// 值是否可以为空:True
+           /// </summary>           
+           public long? RoleInfoID {get;set;}
+
+           /// <summary>
+           /// 注释:
+           /// 默认值:b'0'
            /// 值是否可以为空:False
            /// </summary>           
-           public int RoleId {get;set;}
+           public bool IsEnable {get;set;}
 
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:False
-           /// </summary>           
-           public int ModuleId {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public int? PermissionId {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public int? CreateId {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public string CreateBy {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public DateTime? CreateTime {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public int? ModifyId {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public string ModifyBy {get;set;}
-
-           /// <summary>
-           /// 注释1:
-           /// 默认值:
-           /// 值是否可以为空:True
-           /// </summary>           
-           public DateTime? ModifyTime {get;set;}
-        // 下边三个实体参数，只是做传参作用，所以忽略下
-        [SugarColumn(IsIgnore = true)]
-        public Role Role { get; set; }
-        [SugarColumn(IsIgnore = true)]
-        public Module Module { get; set; }
-        [SugarColumn(IsIgnore = true)]
-        public Permission Permission { get; set; }
     }
 }
                     

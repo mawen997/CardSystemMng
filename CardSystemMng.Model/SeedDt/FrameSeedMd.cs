@@ -16,8 +16,9 @@ namespace CardSystemMng.Model.SeedDt
 
             try
             {
-                
-                myContext.Create_Model_ClassFileByDBTalbe($@"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.Model\Models", "CardSystemMng.Model.Models", new string[] { }, "");
+                var pl = Environment.CurrentDirectory;
+                var fl = pl.Replace("CardSystemMng.Api", "") + @"CardSystemMng.Model\Models";
+                myContext.Create_Model_ClassFileByDBTalbe(fl, "CardSystemMng.Model.Models", new string[] { }, "");
                 return true;
             }
             catch (Exception)
@@ -37,7 +38,9 @@ namespace CardSystemMng.Model.SeedDt
 
             try
             {
-                myContext.Create_IRepository_ClassFileByDBTalbe($@"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.IRepository", "CardSystemMng.IRepository", new string[] { }, "");
+                var pl = Environment.CurrentDirectory;
+                var fl = pl.Replace("CardSystemMng.Api", "") + @"CardSystemMng.IRepository";
+                myContext.Create_IRepository_ClassFileByDBTalbe(fl, "CardSystemMng.IRepository", new string[] { }, "");
                 return true;
             }
             catch (Exception)
@@ -59,7 +62,9 @@ namespace CardSystemMng.Model.SeedDt
 
             try
             {
-                myContext.Create_IServices_ClassFileByDBTalbe($@"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.IServices", "CardSystemMng.IServices", new string[] { "Module" }, "");
+                var pl = Environment.CurrentDirectory;
+                var fl = pl.Replace("CardSystemMng.Api", "") + @"CardSystemMng.IServices";
+                myContext.Create_IServices_ClassFileByDBTalbe(fl, "CardSystemMng.IServices", new string[] { }, "");
                 return true;
             }
             catch (Exception)
@@ -81,7 +86,9 @@ namespace CardSystemMng.Model.SeedDt
 
             try
             {
-                myContext.Create_Repository_ClassFileByDBTalbe($@"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.Repository", "CardSystemMng.Repository", new string[] { "Module" }, "");
+                var pl = Environment.CurrentDirectory;
+                var fl = pl.Replace("CardSystemMng.Api", "") + @"CardSystemMng.Repository";
+                myContext.Create_Repository_ClassFileByDBTalbe(fl, "CardSystemMng.Repository", new string[] { }, "");
                 return true;
             }
             catch (Exception)
@@ -103,7 +110,9 @@ namespace CardSystemMng.Model.SeedDt
 
             try
             {
-                myContext.Create_Services_ClassFileByDBTalbe($@"E:\实验室\ASP.NET COR学习\CardSystemMng\CardSystemMng.Services", "CardSystemMng.Services", new string[] { "Module" }, "");
+                var pl = Environment.CurrentDirectory;
+                var fl = pl.Replace("CardSystemMng.Api", "") + @"CardSystemMng.Services";
+                myContext.Create_Services_ClassFileByDBTalbe(fl, "CardSystemMng.Services", new string[] {}, "");
                 return true;
             }
             catch (Exception)
