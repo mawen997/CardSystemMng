@@ -9,7 +9,7 @@ namespace CardSystemMng.Repository
 	/// <summary>
 	/// topicdetailRepository
 	/// </summary>
-    public class topicdetailRepository : BaseRepository<topicdetail>, ItopicdetailRepository
+    public class topicdetailRepository : BaseRepository<TopicDetail>, ItopicdetailRepository
     {
         public topicdetailRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

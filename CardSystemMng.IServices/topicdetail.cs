@@ -7,7 +7,7 @@ namespace CardSystemMng.IServices
 	/// <summary>
 	/// ItopicdetailServices
 	/// </summary>	
-    public interface ItopicdetailServices :IBaseServices<topicdetail>
+    public interface ItopicdetailServices :IBaseServices<TopicDetail>
 	{
 
        

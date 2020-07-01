@@ -6,7 +6,7 @@ using CardSystemMng.Services.BASE;
 
 namespace CardSystemMng.Services
 {
-    public partial class userroleServices : BaseServices<userrole>, IuserroleServices
+    public partial class userroleServices : BaseServices<UserRole>, IuserroleServices
     {
         IuserroleRepository _dal;
         public userroleServices(IuserroleRepository dal)

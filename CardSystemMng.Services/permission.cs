@@ -6,7 +6,7 @@ using CardSystemMng.Services.BASE;
 
 namespace CardSystemMng.Services
 {
-    public partial class permissionServices : BaseServices<permission>, IpermissionServices
+    public partial class permissionServices : BaseServices<Permission>, IpermissionServices
     {
         IpermissionRepository _dal;
         public permissionServices(IpermissionRepository dal)

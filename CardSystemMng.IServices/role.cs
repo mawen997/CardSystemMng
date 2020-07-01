@@ -7,7 +7,7 @@ namespace CardSystemMng.IServices
 	/// <summary>
 	/// IroleServices
 	/// </summary>	
-    public interface IroleServices :IBaseServices<role>
+    public interface IroleServices :IBaseServices<Role>
 	{
 
        

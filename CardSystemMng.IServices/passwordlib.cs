@@ -7,7 +7,7 @@ namespace CardSystemMng.IServices
 	/// <summary>
 	/// IpasswordlibServices
 	/// </summary>	
-    public interface IpasswordlibServices :IBaseServices<passwordlib>
+    public interface IpasswordlibServices :IBaseServices<PasswordLib>
 	{
 
        

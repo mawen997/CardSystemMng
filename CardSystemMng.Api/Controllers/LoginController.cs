@@ -67,9 +67,7 @@ namespace CardSystemMng.Api.Controllers
             var user = await _sysUserInfoServices.GetUserRoleNameStr(name, MD5Helper.MD5Encrypt32(pass));
             if (user != null)
             {
-
                 TokenModelJwt tokenModel = new TokenModelJwt { Uid = 1, Role = user };
-
                 jwtStr = JwtHelper.IssueJwt(tokenModel);
                 suc = true;
             }

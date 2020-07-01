@@ -7,7 +7,7 @@ namespace CardSystemMng.IServices
 	/// <summary>
 	/// IpermissionServices
 	/// </summary>	
-    public interface IpermissionServices :IBaseServices<permission>
+    public interface IpermissionServices :IBaseServices<Permission>
 	{
 
        

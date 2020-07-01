@@ -9,7 +9,7 @@ namespace CardSystemMng.Repository
 	/// <summary>
 	/// passwordlibRepository
 	/// </summary>
-    public class passwordlibRepository : BaseRepository<passwordlib>, IpasswordlibRepository
+    public class passwordlibRepository : BaseRepository<PasswordLib>, IpasswordlibRepository
     {
         public passwordlibRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

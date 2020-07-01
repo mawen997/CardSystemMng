@@ -9,7 +9,7 @@ namespace CardSystemMng.Repository
 	/// <summary>
 	/// operatelogRepository
 	/// </summary>
-    public class operatelogRepository : BaseRepository<operatelog>, IoperatelogRepository
+    public class operatelogRepository : BaseRepository<OperateLog>, IoperatelogRepository
     {
         public operatelogRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

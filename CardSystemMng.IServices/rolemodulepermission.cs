@@ -7,7 +7,7 @@ namespace CardSystemMng.IServices
 	/// <summary>
 	/// IrolemodulepermissionServices
 	/// </summary>	
-    public interface IrolemodulepermissionServices :IBaseServices<rolemodulepermission>
+    public interface IrolemodulepermissionServices :IBaseServices<RoleModulePermission>
 	{
 
        

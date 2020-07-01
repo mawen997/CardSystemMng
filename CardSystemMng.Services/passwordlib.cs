@@ -6,7 +6,7 @@ using CardSystemMng.Services.BASE;
 
 namespace CardSystemMng.Services
 {
-    public partial class passwordlibServices : BaseServices<passwordlib>, IpasswordlibServices
+    public partial class passwordlibServices : BaseServices<PasswordLib>, IpasswordlibServices
     {
         IpasswordlibRepository _dal;
         public passwordlibServices(IpasswordlibRepository dal)

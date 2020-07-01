@@ -9,7 +9,7 @@ namespace CardSystemMng.Repository
 	/// <summary>
 	/// sysuserinfoRepository
 	/// </summary>
-    public class sysuserinfoRepository : BaseRepository<sysuserinfo>, IsysuserinfoRepository
+    public class sysuserinfoRepository : BaseRepository<sysUserInfo>, IsysuserinfoRepository
     {
         public sysuserinfoRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

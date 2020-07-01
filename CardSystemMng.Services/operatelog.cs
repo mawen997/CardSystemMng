@@ -6,7 +6,7 @@ using CardSystemMng.Services.BASE;
 
 namespace CardSystemMng.Services
 {
-    public partial class operatelogServices : BaseServices<operatelog>, IoperatelogServices
+    public partial class operatelogServices : BaseServices<OperateLog>, IoperatelogServices
     {
         IoperatelogRepository _dal;
         public operatelogServices(IoperatelogRepository dal)

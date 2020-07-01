@@ -7,7 +7,7 @@ namespace CardSystemMng.IServices
 	/// <summary>
 	/// IoperatelogServices
 	/// </summary>	
-    public interface IoperatelogServices :IBaseServices<operatelog>
+    public interface IoperatelogServices :IBaseServices<OperateLog>
 	{
 
        

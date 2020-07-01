@@ -9,7 +9,7 @@ namespace CardSystemMng.Repository
 	/// <summary>
 	/// userroleRepository
 	/// </summary>
-    public class userroleRepository : BaseRepository<userrole>, IuserroleRepository
+    public class userroleRepository : BaseRepository<UserRole>, IuserroleRepository
     {
         public userroleRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

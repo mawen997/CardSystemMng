@@ -6,7 +6,7 @@ using CardSystemMng.Services.BASE;
 
 namespace CardSystemMng.Services
 {
-    public partial class topicdetailServices : BaseServices<topicdetail>, ItopicdetailServices
+    public partial class topicdetailServices : BaseServices<TopicDetail>, ItopicdetailServices
     {
         ItopicdetailRepository _dal;
         public topicdetailServices(ItopicdetailRepository dal)

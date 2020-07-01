@@ -36,6 +36,11 @@
 
   <ItemGroup>
     <Folder Include="Controllers\DbFirst\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\swagger-ui.css.map" />
   </ItemGroup>
 
 
